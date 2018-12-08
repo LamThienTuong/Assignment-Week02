@@ -8,11 +8,8 @@ fs.readFile("products.json", "utf8", (err, data) => {
 
   a.forEach(obj => {
     obj.dateUpdated = new Date();
-    //a.dateUpdated = d.;
-  });
-
-  a.forEach(obj => {
     obj.price = obj.price.toLocaleString("en");
+    //a.dateUpdated = d.;
   });
 
   let b = JSON.stringify(a);
