@@ -11,7 +11,12 @@ fs.readFile("products.json", "utf8", (err, data) => {
     //a.dateUpdated = d.;
   });
 
+  a.forEach(obj => {
+    obj.price = obj.price.toLocaleString("en");
+  });
+
   let b = JSON.stringify(a);
+
   fs.writeFile("test.js", b, err => {
     if (err) {
       console.error(err);
